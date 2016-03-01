@@ -16,9 +16,8 @@ sudo pip install virtualenvwrapper
 echo "export WORKON_HOME=$HOME/.virtualenvs\nsource /usr/local/bin/virtualenvwrapper.sh" >> .bashrc
 echo "alias reload='source ~/.bashrc'\nalias gs='git status'\nalias gd='git diff'" > .bash_aliases
 sudo apt-get install tmux
-mkdir .tmux
 echo "unbind C-b\nset -g prefix C-s\nset -g default-terminal 'screen-256color'\nset -g mode-mouse on\nset -g mouse-resize-pane on\nset -g mouse-select-pane on\nset -g mouse-select-window on\nbind-key - split-window -v -c '#{pane_current_path}'
-\nbind-key / split-window -h -c '#{pane_current_path}'" > .tmux/conf
+\nbind-key / split-window -h -c '#{pane_current_path}'" > .tmux.conf
 source ~/.bashrc
 tmux
-tmux source-file ~/.tmux/conf
+tmux source-file ~/.tmux.conf
